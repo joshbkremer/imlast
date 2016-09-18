@@ -1,9 +1,21 @@
 <html>
 <head>
   <title>I'm last</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+  <script>
+    function promptVideo() {
+      $('#videoEntry').append(
+        '<div id="inputVideo">' +
+          '<form>' +
+          '<input id="inputBox" text="text" size="14">' +
+          '</form>' +
+        '</div>'
+      );
+    }
+  </script>
   <div class="box">
 
     <div id="titleBlock">
@@ -13,7 +25,11 @@
 
       <div id="titlePrice">
         Current Price: <span id="price"> $1.00 </span>
-        <button id="buyIt">Buy it</button>
+        <button id="buyIt" onclick="promptVideo();">Buy it</button>
+      </div>
+
+      <div id="videoEntry">
+
       </div>
     </div>
 
