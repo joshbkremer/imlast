@@ -5,15 +5,36 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-  <script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $.ajax({
+        type: 'GET',
+        url: '/currentVideo',
+        success: handleCurrentVideo
+      })
+    });
+
+    function handleCurrentVideo(res) {
+      document.getElementById('youtubeIFrame').src = res.youtubeSrc;
+    }
+
+    function handleNewVideo() {
+      $.ajax({
+        type: 'POST',
+        data: {newVideo: $('input[id=videoInputBox]').val()},
+        url: '/postVideo',
+        success: handleCurrentVideo
+      });
+    }
+
     function promptVideo() {
       if($('#inputVideo').length)
         return;
 
       $('#videoEntry').append(
         '<div id="inputVideo">' +
-          '<form>' +
-          '<input id="inputBox" text="text" size="14">' +
+          '<form action="JavaScript:handleNewVideo()">' +
+          '<input id="videoInputBox" text="text" size="14">' +
           '</form>' +
         '</div>'
       );
@@ -37,7 +58,7 @@
 
     <div id="youtubeBlock">
       <div id="youtubeVideo">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/8s3UogfAGg0" frameborder="0" allowfullscreen></iframe>
+        <iframe id="youtubeIFrame" width="560" height="315" src="https://www.youtube.com/embed/8s3UogfAGg0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
