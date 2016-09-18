@@ -16,6 +16,7 @@
 
     function handleCurrentVideo(res) {
       document.getElementById('youtubeIFrame').src = res.youtubeSrc;
+      document.getElementById('price').innerHTML = parseFloat(res.price).toFixed(2);
     }
 
     function handleNewVideo() {
@@ -25,6 +26,7 @@
         url: '/postVideo',
         success: handleCurrentVideo
       });
+      $('#inputVideo').remove();
     }
 
     function promptVideo() {
