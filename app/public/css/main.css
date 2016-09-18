@@ -1,0 +1,54 @@
+html body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Gotham','Varela Round',sans-serif;
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+#titleBlock {
+  background-color: #107E7D;
+  flex: 0 1 100px;
+}
+
+#titleText {
+  text-align: center;
+  position: relative;
+  top: 10px;
+  margin: 0 auto;
+  color: #610345;
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+#titlePrice {
+  text-align: center;
+  position: relative;
+  top: 10px;
+  margin: 0 auto;
+  color: #E3B505;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+#price {
+  color: #95190C;
+}
+
+#youtubeBlock {
+  background-color: #044B7F;
+  flex: 1 1 auto;
+  width: 100%;
+  text-align: center;
+}
+
+#youtubeVideo {
+  position: relative;
+  top: 50px;
+  margin: 0 auto;
+  display: inline-block;
+}
