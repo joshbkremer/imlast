@@ -7,6 +7,9 @@
 <body>
   <script>
     function promptVideo() {
+      if($('#inputVideo').length)
+        return;
+
       $('#videoEntry').append(
         '<div id="inputVideo">' +
           '<form>' +
@@ -29,7 +32,6 @@
       </div>
 
       <div id="videoEntry">
-
       </div>
     </div>
 

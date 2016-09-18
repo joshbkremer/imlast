@@ -12,7 +12,7 @@ html body {
 
 #titleBlock {
   background-color: #107E7D;
-  flex: 0 1 100px;
+  flex: 0 1 105px;
 }
 
 #titleText {
@@ -39,12 +39,14 @@ html body {
   color: #95190C;
 }
 
-
-#inputBox {
+#videoEntry {
   text-align: center;
   position: relative;
   margin: 0 auto;
+  top: 10px;
+}
 
+#inputBox {
   font-size: 16px;
   background-color: #3A167E;
   border-bottom: 1px solid #008000;
@@ -52,6 +54,7 @@ html body {
   border-right: 0px solid #008000;
   border-left: 0px solid #008000;
   color: #FFFF01;
+  width: 800px;
 }
 
 #youtubeBlock {
